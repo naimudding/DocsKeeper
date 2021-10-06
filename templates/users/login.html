@@ -1,4 +1,6 @@
-<!doctype html>
+{% load static %}
+
+<!DOCKTYPE html>
 <html lang="en">
   <head>
   	<title>Login 07</title>
@@ -9,7 +11,7 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" src="{% static 'css/style.css' %}">
 
 	</head>
 	<body>
@@ -17,7 +19,7 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Login #07</h2>
+					<h2 class="heading-section">Login</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -44,7 +46,7 @@
 			      	</div>
 							<form action="#" class="signin-form">
 			      		<div class="form-group mb-3">
-			      			<label class="label" for="name">Username</label>
+			      			<label class="label" for="name">Email</label>
 			      			<input type="text" class="form-control" placeholder="Username" required>
 			      		</div>
 		            <div class="form-group mb-3">
@@ -56,7 +58,7 @@
 		            </div>
 		            <div class="form-group d-md-flex">
 		            	<div class="w-50 text-left">
-			            	<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+			            	<label class="checkbox-wrap checkbox-primary mb-0">
 									  <input type="checkbox" checked>
 									  <span class="checkmark"></span>
 										</label>
@@ -72,11 +74,11 @@
 			</div>
 		</div>
 	</section>
-
-<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+	
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
 	</body>
 </html>
