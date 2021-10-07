@@ -14,7 +14,7 @@
 				<div class="text w-100">
 					<h2>Welcome to login</h2>
 					<p>Don't have an account?</p>
-					<a href="#" class="btn btn-white btn-outline-white">Sign Up</a>
+					<a  href = "{% url 'register' %}" class="btn btn-white btn-outline-white" >Sign Up</a>
 				</div>
       </div>
 			<div class="login-wrap p-4 p-lg-5">
@@ -31,8 +31,8 @@
       	</div>
 				<form action="#" class="signin-form">
       		<div class="form-group mb-3">
-      			<label class="label" for="name">Username</label>
-      			<input type="text" class="form-control" placeholder="Username" required>
+      			<label class="label" for="name">Email</label>
+      			<input type="text" class="form-control" placeholder="Email" required>
       		</div>
         <div class="form-group mb-3">
         	<label class="label" for="password">Password</label>
