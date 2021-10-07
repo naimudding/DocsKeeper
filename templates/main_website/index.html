@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,10 +10,10 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Sixteen Clothing HTML Template</title>
+    <title>DocsKeeper Home</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static '/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 <!--
 
 TemplateMo 546 Sixteen Clothing
@@ -22,9 +23,9 @@ https://templatemo.com/tm-546-sixteen-clothing
 -->
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-sixteen.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="{% static '/assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/templatemo-sixteen.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/owl.css' %}">
 
   </head>
 
@@ -56,13 +57,16 @@ https://templatemo.com/tm-546-sixteen-clothing
                 </a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link" href="products.html">Our Products</a>
+                <a class="nav-link" href="products.html">My Documents</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="about.html">My accounts</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="contact.html">My Family</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'main_website:feedback' %}">Feedback</a>
               </li>
             </ul>
           </div>
@@ -107,7 +111,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="assets/images/product_01.jpg" alt=""></a>
+              <a href="#"><img src="{% static 'assets/images/product_01.jpg' %}" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>Tittle goes here</h4></a>
                 <h6>$25.75</h6>
@@ -125,7 +129,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="assets/images/product_02.jpg" alt=""></a>
+              <a href="#"><img src="{% static 'assets/images/product_02.jpg' %}" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>Tittle goes here</h4></a>
                 <h6>$30.25</h6>
@@ -143,7 +147,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="assets/images/product_03.jpg" alt=""></a>
+              <a href="#"><img src="{% static 'assets/images/product_03.jpg' %}" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>Tittle goes here</h4></a>
                 <h6>$20.45</h6>
@@ -161,7 +165,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="assets/images/product_04.jpg" alt=""></a>
+              <a href="#"><img src="{% static 'assets/images/product_04.jpg' %}" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>Tittle goes here</h4></a>
                 <h6>$15.25</h6>
@@ -179,7 +183,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="assets/images/product_05.jpg" alt=""></a>
+              <a href="#"><img src="{% static 'assets/images/product_05.jpg' %}" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>Tittle goes here</h4></a>
                 <h6>$12.50</h6>
@@ -197,7 +201,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="assets/images/product_06.jpg" alt=""></a>
+              <a href="#"><img src="{% static 'assets/images/product_06.jpg' %}" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>Tittle goes here</h4></a>
                 <h6>$22.50</h6>
@@ -241,7 +245,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           </div>
           <div class="col-md-6">
             <div class="right-image">
-              <img src="assets/images/feature-image.jpg" alt="">
+              <img src="{% static 'assets/images/feature-image.jpg' %}" alt="">
             </div>
           </div>
         </div>
@@ -286,16 +290,16 @@ https://templatemo.com/tm-546-sixteen-clothing
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
 
     <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/accordions.js"></script>
+    <script src="{% static '/assets/js/custom.js' %}"></script>
+    <script src="{% static '/assets/js/owl.js' %}"></script>
+    <script src="{% static '/assets/js/slick.js' %}"></script>
+    <script src="{% static '/assets/js/isotope.js' %}"></script>
+    <script src="{% static '/assets/js/accordions.js' %}"></script>
 
 
     <script language = "text/Javascript"> 
